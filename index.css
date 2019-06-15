@@ -1,0 +1,356 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.container{
+    max-width: 1500px;
+min-width: 960px;
+display: flex;
+justify-content: space-between;
+margin: 0 auto;
+height: 100%;
+}
+
+.header{
+   
+
+}
+.navigation{
+  
+    display: flex;
+    height: 68px;
+    width: 190px;
+    flex-shrink: 0;
+    padding-left: 10px;
+}
+.logo{
+    width: 200px;
+    height: 100%;
+    background-image: url('hipmunk-logo.png');
+    background-size: cover;
+}
+.navbar ul{
+    display: flex;
+    align-items: center;
+    height: 68px;
+    list-style-type: none;
+}
+.navbar ul li{
+    font-size: 16px;
+    margin-left: 25px;
+    
+}
+.frontpage{
+    max-width: 1500px;
+    min-width: 960px;
+}
+.frontpagebase img{
+    /* background-image: #ffffff url("c.png") no-repeat; */
+    max-width: 100%;
+    min-width: 100%;
+}
+/* .arrow::before{
+content: "\f036";
+} */
+.my-search{
+    display: flex;
+}
+.drop{
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #c5c9d0;
+    
+}
+.dropbar{
+    display: flex;
+    width: 190px;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+}
+.searchfor{
+    border-right: 1px solid #c5c9d0;
+}
+.searchbar{
+    width: 190px;
+    cursor: pointer;
+    text-align: center;
+    display: block; 
+}
+.search1{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* border-left: 1px solid #c5c9d0;
+    border-right: 1px solid #c5c9d0; */
+}
+.search2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+   
+    width: 100%;
+}
+.tab-panel{
+    position: absolute;
+    
+    width: 100px;
+    height: 20px;
+    top: 190px;
+    /* display: inline-block; */
+}
+.nav{
+   list-style-type: none;
+   display: flex;
+   height: 68px;
+ 
+  
+}
+.nav ul li{
+    font-size: 16px;
+    margin-left: 25px;
+    width: 23px;
+    padding: 23px;
+    background: navy;
+}
+.nav a{
+    text-decoration: none;
+}
+.head{
+    color: white;
+    position: absolute;
+    top:130px;
+    margin-left: 370px;
+}
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color:  #1e5885;
+    
+    position: absolute;
+    top: 200px;
+    margin-left: 220px;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: 1px solid  white;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 18px;
+    transition: 0.3s;
+    font-size: 17px;
+    color: white;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: rgb(67, 35, 245);
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    /* background-color: rgb(31, 6, 141); */
+    background-color: #06375c;
+  }
+  .dropbar{
+      display: flex;
+  }
+  input[type=text],label {
+    width: 20%;
+    height: 10%;
+    padding: 12px 20px;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+   
+  }
+ #search-button {
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+  }
+  select {
+    width:  10%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+  }
+  .round1{
+    margin-left: -10px; 
+    
+  }
+  .tabcontent.round{
+    margin-top: -10px; 
+    padding: 20px;
+  }
+  /* Style the tab content */
+  .tabcontent {
+    width: 67%;
+    box-sizing: border-box;
+    height: 140px;
+    font-size: 14px;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    position: absolute;
+    top: 250px;
+    margin-left: 220px;
+    background: white;
+  }
+  #Cars{
+    display: none;
+  }
+  #Hotels{
+      display: none;
+  }
+  .active{
+      display: block;
+  }
+  /* body {
+	background:#bf5c71 url('body-bg.jpg');
+} */
+
+.clearfix:after {
+	display:block;
+	clear:both;
+}
+
+/*----- Menu Outline -----*/
+.menu-wrap {
+	width:40%;
+	box-shadow:0px 1px 3px rgba(0,0,0,0.2);
+	/* background:#3e3436; */
+}
+/* .wrap {
+	width:40%;
+	/* box-shadow:0px 1px 3px rgba(0,0,0,0.2); */
+	/* background:#3e3436; */
+} */
+.flagscountry{
+    width:100%;
+    box-shadow:0px 1px 3px rgba(0,0,0,0.2);
+}
+.menu {
+	width:350px;
+	margin:0px auto;
+}
+.menuu {
+	width:350px;
+	margin:0px auto;
+}
+.menu li {
+	margin:0px;
+	list-style:none;
+	font-family:'Ek Mukta';
+}
+.menuu li {
+	margin:0px;
+	list-style:none;
+	font-family:'Ek Mukta';
+}
+.menu a {
+	transition:all linear 0.15s;
+    color:#919191;
+    text-decoration: none;
+}
+.menuu a {
+	transition:all linear 0.15s;
+    color:#919191;
+    text-decoration: none;
+}
+
+.menu li:hover > a, .menu .current-item > a {
+	text-decoration:none;
+	color:#be5b70;
+}
+.menuu li:hover > a, .menu .current-item > a {
+	text-decoration:none;
+	color:#be5b70;
+}
+.menu .arrow {
+	font-size:11px;
+	line-height:0%;
+}
+.menuu .arrow {
+	font-size:11px;
+	line-height:0%;
+}
+/*----- Top Level -----*/
+.menu > ul > li {
+	float:left;
+	display:inline-block;
+	position:relative;
+	font-size:19px;
+}
+.menuu > ul > li {
+	float:left;
+	display:inline-block;
+	position:relative;
+	font-size:19px;
+}
+.menu > ul > li > a {
+	padding:10px 40px;
+	display:inline-block;
+	text-shadow:0px 1px 0px rgba(0,0,0,0.4);
+}
+.menuu > ul > li > a {
+	padding:10px 40px;
+	display:inline-block;
+	text-shadow:0px 1px 0px rgba(0,0,0,0.4);
+}
+.menu > ul > li:hover > a, .menu > ul > .current-item > a {
+    background:#2e2728;
+    
+}
+.menuu > ul > li:hover > a, .menu > ul > .current-item > a {
+    background:#2e2728;
+    
+}
+/*----- Bottom Level -----*/
+.menu li:hover .sub-menu {
+	z-index:1;
+	opacity:1;
+}
+.menuu li:hover .sub-menu {
+	z-index:1;
+	opacity:1;
+}
+.sub-menu {
+	width:160%;
+	padding:5px 0px;
+	position:absolute;
+	top:100%;
+	left:0px;
+	z-index:-1;
+	opacity:0;
+	transition:opacity linear 0.15s;
+	box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+	background:#2e2728;
+}
+
+.sub-menu li {
+	display:block;
+	font-size:16px;
+}
+
+.sub-menu li a {
+	padding:10px 30px;
+    display:block;
+    text-decoration: none;
+}
+
+.sub-menu li a:hover, .sub-menu .current-item a {
+	background:#3e3436;
+}

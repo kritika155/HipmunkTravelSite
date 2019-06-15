@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ek+Mukta">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="./fontawesome-free-5.7.2-web/css/all.css" />
+            <link rel="stylesheet" href="index.css" />
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="container">
+          <div class="navigation">  
+              <div class="header">
+                <a><div class="logo"></div></a>
+              </div>
+            <div class="navbar">
+                 <ul class="u-li">
+                     <li class="h-li">Flights</li>
+                     <li class="h-li">Cars</li>
+                     <li class="h-li">Hotels</li>
+                     <li class="h-li" class="h-li">Deals</li>
+                     <li class="h-li"><a class="a-li"><span class="s-li"><i class="fa fa-mobile-phone i-li" style="font-size: 36px"></i></span></a></li>
+                 </ul>
+            </div>
+           
+        </div>
+         <div class="my-search">
+                <div class="wrap">
+                        <nav class="menuu">
+                            <ul class="clearfixx">
+                                    <li>
+                                        <div class="flagscountry">
+                                                <a href="#"><i class="fas fa-flag-checkered"></i><span class="arrow">&#9660;</span></a>
+                                                <ul class="sub-menu">
+                                                        <li><a href="#">In Cinemas Now</a></li>
+                                                        <li><a href="#">Coming Soon</a></li>
+                                                        <li><a href="#">On DVD/Blu-ray</a></li>
+                                                        <li><a href="#">Showtimes &amp; Tickets</a></li>
+                                                    </ul>
+                                        </div>
+                                      </li>
+                             
+                               
+                           
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="menu-wrap">
+                            <nav class="menu">
+                                <ul class="clearfix">
+                                    
+                                    <li>
+                                        <a href="#">Movies <span class="arrow">&#9660;</span></a>
+                        
+                                        <ul class="sub-menu">
+                                            <li><a href="#">In Cinemas Now</a></li>
+                                            <li><a href="#">Coming Soon</a></li>
+                                            <li><a href="#">On DVD/Blu-ray</a></li>
+                                            <li><a href="#">Showtimes &amp; Tickets</a></li>
+                                        </ul>
+                                    </li>
+                                   
+                               
+                                </ul>
+                            </nav>
+                        </div>
+             <div class="account">Sign Up</div>
+         </div>
+        </div>
+        <div class="notification">
+            <div class="result">
+                    
+                <div class="frontpage">
+                        <h1 class="head">Don't let travel planning drive you nuts</h1>
+                    <div class="frontpagebase">
+                        <img src="c.png"/>
+                    </div>
+                </div>
+                <div class="tab">
+                        <button class="tablinks" onclick="openCity(event, 'Flights')" class="active">Flights</button>
+                        <button class="tablinks" onclick="openCity(event, 'Hotels')">Hotels</button>
+                        <button class="tablinks" onclick="openCity(event, 'Cars')">Cars</button>
+                </div>
+                <div id="Flights" class="tabcontent">
+                    <label class="round1">
+                    <input type="radio" class="round1">
+                    <span  class="round2">Roundtrip</span>
+                    
+                </label>
+                <label class="round">
+                        <input type="radio">
+                        <span class="round">One-Way</span>
+                    </label>
+                    <label class="round">
+                            <input type="radio">
+                            <span class="round">Multi-City</span>
+                        </label>
+                        <label class="round">
+                                <input type="radio">
+                                <span class="round">Price Graph</span>
+                            </label>
+                            <span style="float: right">Search thousands of flight options instantly</span><br>
+                            <input type="text" placeholder="From:City or Airport">
+                            <input type="text" placeholder="To:City or Airport">
+                            <!-- <input type="date" placeholder="Jun 21"> -->
+                            <label style="border: 1px solid grey;margin:0;">Jun 21</label>
+                            <label style="border: 1px solid grey;margin:0;">Jun 23</label>
+                            <select name="passengers">
+                                    <option value="volvo">1 person</option>
+                                    <option value="saab">Saab</option>
+                                    <option value="fiat">Fiat</option>
+                                    <option value="audi">Audi</option>
+                                  </select>
+                                  <!-- <input type="button"> -->
+                                 <button id="search-button"><span>&#9992;</span>SEARCH</button>
+                               
+                </div>
+                <div id="Hotels" class="tabcontent"><label>
+                        <input type="radio">
+                        <span>One Way</span>
+                    </label>
+                </div>
+                <div id="Cars" class="tabcontent"><label>
+                        <input type="radio">
+                        <span>Multi-City</span>
+                    </label>
+                </div>
+                    <!-- <div id="Cars" class="tabcontent"><label>
+                            <input type="radio">
+                            <span>Multi-City</span>
+                        </label></div> -->
+            </div>
+        </div>
+        <script>
+            
+                function openCity(evt, cityName) {
+                   if(cityName=='Flights')
+                {
+                    evt.currentTarget.className += " active";
+                }
+                  var i, tabcontent, tablinks;
+                  tabcontent = document.getElementsByClassName("tabcontent");
+                  for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                  }
+                  tablinks = document.getElementsByClassName("tablinks");
+                  for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                  }
+                  document.getElementById(cityName).style.display = "block";
+                  evt.currentTarget.className += " active";
+                }
+                </script>
+    </body>
+</html>

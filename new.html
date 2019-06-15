@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<style>
+.exciting-text::after {
+    content: "  EXCITING!"; 
+    color: green;
+  }
+  
+  .boring-text::after {
+    content: " <- BORING";
+    color: red;
+  }
+  .container{
+    width: 200px;
+    height: 75px;
+    background: rebeccapurple;
+    display: flex;
+  }
+  .p{
+    /* position: absolute; */
+    width: 50px;
+    height: 50px;
+    background: blue;
+    padding: 23px;
+    /* display: flex; */
+  }
+  /*----- Tabs -----*/
+.tabs {
+	width:100%;
+	display:inline-block;
+}
+
+/*----- Tab Links -----*/
+/* Clearfix */
+	.tab-links:after {
+	display:block;
+	clear:both;
+	content:'';
+}
+
+.tab-links li {
+	margin:0px;
+	float:left;
+	list-style:none;
+}
+
+.tab-links a {
+	padding:9px 15px;
+	display:inline-block;
+	/* border-radius:3px 3px 0px 0px; */
+	background:#7FB5DA;
+	font-size:16px;
+	font-weight:600;
+	color:#4c4c4c;
+  transition:all linear 0.15s;
+  border: 1px solid white;
+}
+
+.tab-links a:hover {
+	background:#a7cce5;
+	text-decoration:none;
+}
+
+li.active a, li.active a:hover {
+	background:rgb(9, 138, 224);
+	color:#4c4c4c;
+}
+
+/*----- Content of Tabs -----*/
+.tab-content {
+	padding:15px;
+	border-radius:3px;
+	box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+	background:#fff;
+}
+
+.tab {
+	display:none;
+}
+
+.tab.active {
+	display:block;
+}
+.tab-links{
+  margin-left: 0px;
+}
+/*----- Toggle Button -----*/
+.toggle-nav {
+	display:none;
+}
+
+/*----- Menu -----*/
+@media screen and (min-width: 860px) {
+	.menu {
+	width:100%;
+	padding:10px 18px;
+	box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+	border-radius:3px;
+	background:#303030;
+	}
+}
+
+.menu ul {
+	display:inline-block;
+}
+
+.menu li {
+	margin:0px 50px 0px 0px;
+	float:left;
+	list-style:none;
+	font-size:17px;
+}
+
+.menu li:last-child {
+	margin-right:0px;
+}
+
+.menu a {
+	text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+	color:#777;
+  transition:color linear 0.15s;
+  text-decoration: none;
+}
+
+.menu a:hover, .menu .current-item a {
+	text-decoration:none;
+	color:#66a992;
+}
+
+/*----- Search -----*/
+.search-form {
+	float:right;
+	display:inline-block;
+}
+
+.search-form input {
+	width:200px;
+	height:30px;
+	padding:0px 8px;
+	float:left;
+	border-radius:2px 0px 0px 2px;
+	font-size:13px;
+}
+
+.search-form button {
+	height:30px;
+	padding:0px 7px;
+	float:right;
+	border-radius:0px 2px 2px 0px;
+	background:#66a992;
+	font-size:13px;
+	font-weight:600;
+	text-shadow:0px 1px 0px rgba(0,0,0,0.3);
+	color:#fff;
+}
+
+/*----- Responsive -----*/
+@media screen and (max-width: 1150px) {
+	.wrap {
+		width:90%;
+	}
+}
+
+@media screen and (max-width: 970px) {
+	.search-form input {
+		width:120px;
+	}
+}
+
+@media screen and (max-width: 860px) {
+	.menu {
+		position:relative;
+		display:inline-block;
+	}
+
+	.menu ul.active {
+		display:none;
+	}
+
+	.menu ul {
+		width:100%;
+		position:absolute;
+		top:120%;
+		left:0px;
+		padding:10px 18px;
+		box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+		border-radius:3px;
+		background:#303030;
+	}
+
+	.menu ul:after {
+		width:0px;
+		height:0px;
+		position:absolute;
+		top:0%;
+		left:22px;
+		content:'';
+		transform:translate(0%, -100%);
+		border-left:7px solid transparent;
+		border-right:7px solid transparent;
+		border-bottom:7px solid #303030;
+	}
+
+	.menu li {
+		margin:5px 0px 5px 0px;
+		float:none;
+		display:block;
+	}
+
+	.menu a {
+		display:block;
+	}
+
+	.toggle-nav {
+		padding:20px;
+		float:left;
+		display:inline-block;
+		box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+		border-radius:3px;
+		background:#303030;
+		text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+		color:#777;
+		font-size:20px;
+		transition:color linear 0.15s;
+	}
+
+	.toggle-nav:hover, .toggle-nav.active {
+		text-decoration:none;
+		color:#66a992;
+	}
+
+	.search-form {
+		margin:12px 0px 0px 20px;
+		float:left;
+	}
+
+	.search-form input {
+		box-shadow:-1px 1px 2px rgba(0,0,0,0.1);
+	}
+}
+</style>
+</head>
+<body>
+    <!-- <p class="boring-text">Here is some plain old boring text.</p>
+    <p>Here is some normal text that is neither boring nor exciting.</p>
+    <p class="exciting-text">Contributing to MDN is easy and fun.</p> -->
+    <div class="tabs">
+      <ul class="tab-links">
+        <li class="active"><a href="#tab1">Tab #1</a></li>
+        <li><a href="#tab2">Tab #2</a></li>
+        <li><a href="#tab3">Tab #3</a></li>
+        <li><a href="#tab4">Tab #4</a></li>
+      </ul>
+    
+      <div class="tab-content">
+        <div id="tab1" class="tab active">
+          <p>Tab #1 content goes here!</p>
+          <p>Donec pulvinar neque sed semper lacinia. Curabitur lacinia ullamcorper nibh; quis imperdiet velit eleifend ac. Donec blandit mauris eget aliquet lacinia! Donec pulvinar massa interdum risus ornare mollis.</p>
+        </div>
+    
+        <div id="tab2" class="tab">
+          <p>Tab #2 content goes here!</p>
+          <p>Donec pulvinar neque sed semper lacinia. Curabitur lacinia ullamcorper nibh; quis imperdiet velit eleifend ac. Donec blandit mauris eget aliquet lacinia! Donec pulvinar massa interdum risus ornare mollis. In hac habitasse platea dictumst. Ut euismod tempus hendrerit. Morbi ut adipiscing nisi. Etiam rutrum sodales gravida! Aliquam tellus orci, iaculis vel.</p>
+        </div>
+    
+        <div id="tab3" class="tab">
+          <p>Tab #3 content goes here!</p>
+          <p>Donec pulvinar neque sed semper lacinia. Curabitur lacinia ullamcorper nibh; quis imperdiet velit eleifend ac. Donec blandit mauris eget aliquet lacinia! Donec pulvinar massa interdum ri.</p>
+        </div>
+    
+        <div id="tab4" class="tab">
+          <p>Tab #4 content goes here!</p>
+          <p>Donec pulvinar neque sed semper lacinia. Curabitur lacinia ullamcorper nibh; quis imperdiet velit eleifend ac. Donec blandit mauris eget aliquet lacinia! Donec pulvinar massa interdum risus ornare mollis. In hac habitasse platea dictumst. Ut euismod tempus hendrerit. Morbi ut adipiscing nisi. Etiam rutrum sodales gravida! Aliquam tellus orci, iaculis vel.</p>
+        </div>
+      </div>
+    </div>
+    <nav class="menu">
+        <ul class="active">
+          <li class="current-item"><a href="#">Home</a></li>
+          <li><a href="#">My Work</a></li>
+          <li><a href="#">About Me</a></li>
+          <li><a href="#">Get in Touch</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      
+        <a class="toggle-nav" href="#">&#9776;</a>
+      
+        <form class="search-form">
+          <input type="text">
+          <button>Search</button>
+        </form>
+      </nav>
+    <script>
+      jQuery(document).ready(function() {
+	jQuery('.toggle-nav').click(function(e) {
+		jQuery(this).toggleClass('active');
+		jQuery('.menu ul').toggleClass('active');
+
+		e.preventDefault();
+	});
+});
+    jQuery(document).ready(function() {
+	jQuery('.tabs .tab-links a').on('click', function(e) {
+		var currentAttrValue = jQuery(this).attr('href');
+
+		// Show/Hide Tabs
+		jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+
+		// Change/remove current tab to active
+		jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+
+		e.preventDefault();
+	});
+});
+</script>
+</body>
+</html>
