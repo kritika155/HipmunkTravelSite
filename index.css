@@ -10,6 +10,11 @@ display: flex;
 justify-content: space-between;
 margin: 0 auto;
 height: 100%;
+background-color: rgb(242, 246, 250);
+border-bottom-color: rgb(197, 201, 208);
+border-bottom-style: solid;
+border-bottom-width: 1px;
+color: rgb(27, 30, 34);
 }
 
 .header{
@@ -55,6 +60,9 @@ content: "\f036";
 } */
 .my-search{
     display: flex;
+}
+.wrap{
+    /* width: 50%; */
 }
 .drop{
     display: flex;
@@ -134,7 +142,9 @@ content: "\f036";
     top: 200px;
     margin-left: 220px;
   }
-  
+  .intro {  
+    background-color:  #1e5885;  
+}
   /* Style the buttons inside the tab */
   .tab button {
     background-color: inherit;
@@ -236,19 +246,43 @@ content: "\f036";
 /* .wrap {
 	width:40%;
 	/* box-shadow:0px 1px 3px rgba(0,0,0,0.2); */
-	/* background:#3e3436; */
-} */
+    /* background:#3e3436; } 
+*/
 .flagscountry{
-    width:100%;
-    box-shadow:0px 1px 3px rgba(0,0,0,0.2);
+    width:150%;
+    height: 100%;
+    /* background: -webkit-linear-gradient(top,#fff,#f0f1f3); */
+    background: -webkit-linear-gradient(top,#fff,#f0f1f3);
+
+    /* box-shadow:0px 1px 3px rgba(0,0,0,0.2); */
+    /* border: 1px solid #c5c9d0; */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-shadow: 0 1px 1px #888;
+    /* display: none; */
+    margin-right: 15px;
+    width: 60px;
+    border: 1px solid #c5c9d0;
+    color: #163f5e;
+    border-radius: 3px 3px 3px 3px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 8px 8px;
+    /* white-space: nowrap; */
+    vertical-align: top;
+    background-color: rgba(0, 0, 0, 0);
+    background-clip: border-box;
+    position: relative;
+    right: 15px;
 }
 .menu {
-	width:350px;
+	width:250px;
 	margin:0px auto;
 }
 .menuu {
-	width:350px;
-	margin:0px auto;
+	width:60px;
+	margin:20px auto;
 }
 .menu li {
 	margin:0px;
@@ -261,7 +295,7 @@ content: "\f036";
 	font-family:'Ek Mukta';
 }
 .menu a {
-	transition:all linear 0.15s;
+	/* transition:all linear 0.15s; */
     color:#919191;
     text-decoration: none;
 }
@@ -280,13 +314,12 @@ content: "\f036";
 	color:#be5b70;
 }
 .menu .arrow {
-	font-size:11px;
-	line-height:0%;
+	background-color: gray;
 }
 .menuu .arrow {
 	font-size:11px;
 	line-height:0%;
-}
+} */
 /*----- Top Level -----*/
 .menu > ul > li {
 	float:left;
@@ -319,25 +352,96 @@ content: "\f036";
     
 }
 /*----- Bottom Level -----*/
-.menu li:hover .sub-menu {
+.sub-menu table tr:hover{
+	/* z-index:1;
+    opacity:1; */
+    background-color: #d3e9fa;
+}
+.menuu li .sub-menu {
 	z-index:1;
 	opacity:1;
 }
-.menuu li:hover .sub-menu {
-	z-index:1;
-	opacity:1;
+table {
+    display: table;
+    border-collapse: separate;
+    /* border-spacing: 2px; */
+    border-color: grey;
+    vertical-align: middle;
+    border-color: inherit;
+    overflow: hidden;
+    margin: 0px;
+    padding: 10px 0px;
+    /* border:1px solid; */
+    
+}
+table tr{
+    display: block;
+    white-space: nowrap;
+    height: 25px;
+    line-height: 25px;
+    color: #6c7689;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    width: 100%;
+   
+}
+table td{
+    width: 55%;
+    text-align: left;
+}
+.tab-img{
+    font-weight: 400!important;
+    font-size: 12px;
+    padding-left: 7px;
+    /* border: 1px solid; */
+    /* width:90%; */
+    /* padding:-1px; */
+}
+.cur-name{
+    text-align: right;
+    font-size: 11px;
+    font-weight: 400!important;
+    padding-bottom: 0px;
+    padding-left:20px;
+    padding-right: 0px;
+    padding-top: 0px;
+    width: 5%;
+}
+.cur-sign{
+    text-align: right;
+    font-weight: 400!important;
+    padding-bottom: 0px;
+    padding-left: 15px;
+    padding-right: 0px;
+    padding-top: 0px;
+    width: 5%;
+}
+table td{
+    border-collapse: separate;
+    display: table-cell;
+    vertical-align: inherit;
 }
 .sub-menu {
-	width:160%;
+	width:310%;
 	padding:5px 0px;
 	position:absolute;
 	top:100%;
-	left:0px;
-	z-index:-1;
-	opacity:0;
+	right:0px;
+	/* z-index:-1;
+	opacity:0; */
 	transition:opacity linear 0.15s;
-	box-shadow:0px 2px 3px rgba(0,0,0,0.2);
-	background:#2e2728;
+	/* box-shadow:0px 2px 3px rgba(0,0,0,0.2); */
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(102, 102, 102) 0px 3px 16px -3px;
+color: rgb(22, 63, 94);
+    display: none;
+   
+    /* top: 50.5px; */
+    /* right: 294.922px;  */
+     /* z-index: 1001; */
 }
 
 .sub-menu li {
@@ -351,6 +455,84 @@ content: "\f036";
     text-decoration: none;
 }
 
-.sub-menu li a:hover, .sub-menu .current-item a {
+/* .sub-menu li a:hover, .sub-menu .current-item a {
 	background:#3e3436;
+} */
+.account{
+  width: 31%;
+        display: inline-block;
+        vertical-align: top;
+        white-space: nowrap;
+        flex-shrink: 0;
+    text-align: center;
+    position: relative;margin-top: 25px;
+}
+.air{
+    padding: 64px 0;
+    background-color: #f7f8f9;
+    color: #163f5e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.head-air{
+    margin: 0 auto;
+    font-size: 24px;
+    margin-bottom: 24px;
+    display: inline-block;
+}
+.head-content{
+    height: 110px;
+    padding-bottom: 26px;
+}
+.business{
+    height: 415px;
+    padding: 64px 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #6c7689;
+    font-size: 14px;
+    font-weight: 400;
+}
+.business-content{
+    display: flex;
+    justify-content: center;
+    width: 960px;
+    margin: 0 auto;
+    color: #163f5e;
+}
+.business-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #163f5e;
+}
+.effects{
+    position: absolute;
+    top: 113px;
+    right: 220px;
+    background-image: url('sprites_home.png');
+    background-repeat: no-repeat;
+    background-position: 0 -200000px;
+    width: 194px;
+    height: 151px;
+    opacity: 1;
+    z-index:1;
+}
+.business-logo{
+    margin-left: 24px;
+}
+.learn-link{
+    color: #3394de;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+#link-arrow{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin-right: 8px;
+    background-image: url('link-arrow.svg');
 }

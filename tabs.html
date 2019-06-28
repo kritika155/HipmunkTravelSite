@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* classic clearfix */
+div.clear {
+	clear: both;
+}
+
+/* centered fixed-width page container */
+div#wrapper {
+	width: 980px;
+	padding: 10px;
+	margin: 0 auto;
+	border: 1px solid #c0c0c0;
+}
+
+/* tabs styles */
+
+section.tabs {
+	/* a little breathing room for the content within the tabs */
+	padding: 10px;
+}
+
+/* general tab heading styles for the list of headings as a whole */
+section.tabs ul {
+	padding: 0px;
+	margin: 0;
+	list-style-type: none; /* remove the default bullet point for lists */
+	position: relative;
+	z-index: 1;
+}
+
+/* general styles for each tab heading list item */
+section.tabs ul li {
+	float: left; /* make these tab headings sit next to each other */
+	border: 1px solid #c0c0c0;	
+	padding: 10px;
+	margin: 0px;
+	list-style-position: inside;
+	width: 100px;
+	text-align: center;
+	background-color: #f0f0f0;
+}
+
+/* selected tab heading styles */
+section.tabs ul li.selected {
+	/* make the selected tab heading look like it blends with the content below it. */
+ 	background-color: white;
+	border-bottom: 1px solid white;
+}
+
+/* general tab content styles */
+section.tabs article {
+	border: 1px solid #c0c0c0;
+	display: none; /* hidden by default */
+	padding: 10px;
+	position: relative;
+	top: -1px;
+}
+
+/* selected tab content styles */
+section.tabs article.selected {
+	display: block; /* visible! */
+}
+    </style>
+	<title>Using JQuery to create tabs</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<script src="http://code.jquery.com/jquery-3.2.0.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+
+		<h1>Using JQuery to create tabs</h1>
+
+		<section class="tabs">
+			<!-- BEGIN TAB HEADINGS -->
+			<ul>
+				<!-- the first tab is selected by default -->
+				<li id="tab1" class="selected">tab 1</li>
+				<li id="tab2">tab 2</li>
+				<div class="clear"></div><!-- clearfix -->
+			</ul>
+
+			<!-- BEGIN TAB CONTENTS -->
+
+			<!-- the first tab is selected by default -->
+			<article id="tab1_content" class="selected">
+				<h1>Article 1</h1>
+				<p>
+					E-services monetize distributed authentic disintermediate clicks-and-mortar embrace solutions, target partnerships, 24/365 seize impactful; innovate." Enable synergies e-business robust bricks-and-clicks scalable. Envisioneer innovate viral initiatives technologies e-tailers models, e-tailers, data-driven podcasts functionalities real-time incubate platforms bleeding-edge mesh; visualize. Dynamic peer-to-peer strategic cultivate iterate ROI killer visualize integrate implement e-services synergize, killer evolve bricks-and-clicks visionary e-services folksonomies whiteboard strategize. E-commerce podcasting enhance, architectures synergistic.
+				</p>
+			</article>
+
+			<article id="tab2_content">
+				<h1>Article 2</h1>
+				<p>
+					Vertical partnerships proactive engage A-list web-readiness monetize synergies revolutionize recontextualize authentic user-contributed deliverables generate mindshare synergies synergies? Semantic implement enable redefine methodologies--granular incentivize blogging e-commerce; solutions post models, B2B B2C reintermediate networking? Users aggregate remix out-of-the-box morph strategic interfaces dynamic cutting-edge wireless feeds.				
+				</p>
+			</article>
+
+		</section><!-- //.tabs -->
+
+	</div><!-- //#wrapper -->
+<script>
+    //wait till the page loads
+$(function() {
+
+//set up the tab click event handler
+$("section.tabs ul li").click(function () {
+    //handle the tab click event
+    //alert("clicked " + this.id);
+    var tabId = this.id; //get the id of the element that was clicked
+    var contentId = this.id + "_content"; //figure out the id of the corresonding article element by appending "_content" to the id
+
+    //add the selected class to the selected tab to make its bottom border disappear
+    $("section.tabs ul li").removeClass("selected");
+    $("section.tabs ul li#" + tabId).addClass("selected");
+
+    //a css-based way of showing/hiding a selected article
+    $("section.tabs article").removeClass("selected");
+    $("section.tabs article#" + contentId).addClass("selected");
+
+    /*
+    //an alternative javascript-only way of showing/hiding a selected article 
+    //without relying on CSS classes to do that:
+    $("section.tabs article").hide(); //make all articles disappear
+    $("section.tabs article#" + contentId).show(); //make the selected article appear
+    */
+});
+
+});
+</script>
+</body>
+</html>
